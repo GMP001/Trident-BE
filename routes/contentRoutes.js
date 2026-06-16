@@ -148,15 +148,36 @@ router.get('/', (req, res) => {
     try {
       const content = JSON.parse(fs.readFileSync(contentFilePath, 'utf8'));
       const pageId = req.params.pageId;
+      const newPageData = req.body;
       
-      // Update in the appropriate location
+      // Find the page in either pages object or root level
+      let existingPage = null;
+      let pageLocation = null;
+      
       if (content.pages && content.pages[pageId]) {
-        content.pages[pageId] = req.body;
+        existingPage = content.pages[pageId];
+        pageLocation = 'pages';
       } else if (content[pageId]) {
-        content[pageId] = req.body;
+        existingPage = content[pageId];
+        pageLocation = 'root';
+      }
+      
+      if (existingPage) {
+        // MERGE: Only update the fields that were sent, preserve everything else
+        const mergedPage = { ...existingPage, ...newPageData };
+        
+        if (pageLocation === 'pages') {
+          content.pages[pageId] = mergedPage;
+        } else {
+          content[pageId] = mergedPage;
+        }
       } else {
-        // If page doesn't exist, create it at root level
-        content[pageId] = req.body;
+        // Page doesn't exist, create it
+        if (content.pages) {
+          content.pages[pageId] = newPageData;
+        } else {
+          content[pageId] = newPageData;
+        }
       }
       
       content.lastUpdated = new Date().toISOString();

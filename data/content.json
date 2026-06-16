@@ -102,26 +102,23 @@
     "hero": {
       "title": "Ocean Transport",
       "subtitle": "We move your cargo across global waters with reliability, efficiency, and expertise",
-      "video": "/container_vessel_sailing.mp4"
+      "video": "/uploads/1781573418173-491224628.mp4"
     },
     "predictableDeliveries": {
-      "title": "Predictable deliveries in dynamic markets",
-      "description": "Reliability is at the heart of every business. And when your goods move across the globe, uncertainty can disrupt your supply chain in many ways. Geopolitical shifts, weather conditions and inventory fluctuations, to name a few.",
-      "description2": "That's where our experience comes in. Trident Ocean Transport guarantees the reliability your business needs to deliver on time, consistently, to 500+ destinations around the world.",
-      "image": "/ship_at_port.jpg"
+      "image": "/uploads/1781579314411-247160608.jpg"
     },
     "eastWestNetwork": {
       "title": "East-West Network",
       "description": "Learn more about our East-West Network, an innovative network powered by leaner loops with fewer port calls per service, an agile shuttle network and state-of-the-art hubs.",
       "description2": "With the Trident East-West Network, we've developed a flexible and well-connected ocean network that delivers game-changing reliability.",
-      "image": "/ship_in_the_dusk.jpg",
+      "image": "/uploads/1781580926171-297257942.jpg",
       "button1Text": "Explore schedules",
       "button2Text": "Ask prices"
     },
     "gallery": {
-      "title": "Our MLOs are in Action",
+      "title": "Our MLO services are in Action",
       "images": [
-        "/ship_under_dark-sky.jpg",
+        "/uploads/1781582278988-17514555.jpg",
         "/ship-at_port-2.jpg",
         "/Ship_in_the_blue_water.jpg"
       ]
@@ -129,7 +126,7 @@
     "faqs": [
       {
         "question": "What is ocean transport?",
-        "answer": "Ocean transport is the movement of goods and cargo across international waters using container ships, bulk carriers, or other vessels. It's the most common method for international trade, handling over 90% of global trade volume."
+        "answer": "Ocean transport is the movement of goods and cargo across international waters using container ships, bulk carriers, or other vessels. It's the most common method for international trade, handling over 80% of global trade volume."
       },
       {
         "question": "What are the various ocean transport services offered by Trident?",
@@ -2403,5 +2400,5 @@
     "contactEmail": "info@trident.com",
     "contactPhone": "+880 1234 567890"
   },
-  "lastUpdated": "2026-06-15T14:38:27.570Z"
+  "lastUpdated": "2026-06-16T03:57:59.140Z"
 }
