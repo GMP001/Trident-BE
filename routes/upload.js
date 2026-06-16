@@ -8,11 +8,16 @@ const router = express.Router();
 const uploadDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
+  console.log('📁 Created uploads directory:', uploadDir);
 }
 
 // Configure multer for file storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
+    // Double-check directory exists
+    if (!fs.existsSync(uploadDir)) {
+      fs.mkdirSync(uploadDir, { recursive: true });
+    }
     cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
@@ -21,27 +26,45 @@ const storage = multer.diskStorage({
   }
 });
 
-// File filter - allow both images and videos
+// ===== FIXED: File filter - allow images (including AVIF) and videos =====
 const fileFilter = (req, file, cb) => {
-  // Allowed image formats
-  const imageTypes = /jpeg|jpg|png|gif|webp/;
-  // Allowed video formats
-  const videoTypes = /mp4|webm|mov|avi|mkv/;
-  
   const extname = path.extname(file.originalname).toLowerCase();
-  const isImage = imageTypes.test(extname) && imageTypes.test(file.mimetype);
-  const isVideo = videoTypes.test(extname) && file.mimetype.startsWith('video/');
+  const mimetype = file.mimetype.toLowerCase();
+  
+  // Allowed image MIME types
+  const allowedImageMimes = [
+    'image/jpeg',
+    'image/jpg', 
+    'image/png', 
+    'image/gif', 
+    'image/webp',
+    'image/avif'
+  ];
+  
+  // Allowed video MIME types
+  const allowedVideoMimes = [
+    'video/mp4',
+    'video/webm',
+    'video/quicktime',  // .mov files
+    'video/x-msvideo',  // .avi files
+    'video/x-matroska'  // .mkv files
+  ];
+  
+  const isImage = allowedImageMimes.includes(mimetype);
+  const isVideo = allowedVideoMimes.includes(mimetype);
   
   if (isImage || isVideo) {
-    return cb(null, true);
+    console.log(`✅ File accepted: ${file.originalname} (${mimetype})`);
+    cb(null, true);
   } else {
-    cb(new Error('Only image (jpg, png, gif, webp) or video (mp4, webm, mov) files are allowed'));
+    console.error(`❌ File rejected: ${file.originalname} (${mimetype})`);
+    cb(new Error(`File type not allowed: ${mimetype}. Allowed: JPG, PNG, GIF, WebP, AVIF, MP4, WebM, MOV, AVI, MKV`), false);
   }
 };
 
 const upload = multer({ 
   storage: storage,
-  limits: { fileSize: 300 * 1024 * 1024 }, // 300MB limit for larger full HD videos
+  limits: { fileSize: 300 * 1024 * 1024 }, // 300MB limit
   fileFilter: fileFilter
 });
 
@@ -55,15 +78,41 @@ const verifyAuth = (req, res, next) => {
   }
 };
 
-// Upload endpoint
-router.post('/', verifyAuth, upload.single('image'), (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+// ===== FIXED: Upload endpoint - multer error handling wrapped properly =====
+router.post('/', verifyAuth, (req, res) => {
+  // Use multer as middleware inside the route handler
+  upload.single('image')(req, res, function (err) {
+    // Handle multer errors FIRST
+    if (err) {
+      console.error('❌ Upload error:', err.message);
+      
+      if (err instanceof multer.MulterError) {
+        // Multer-specific errors
+        if (err.code === 'LIMIT_FILE_SIZE') {
+          return res.status(400).json({ error: 'File too large. Maximum size is 300MB.' });
+        }
+        if (err.code === 'LIMIT_UNEXPECTED_FILE') {
+          return res.status(400).json({ error: 'Unexpected file field. Use "image" as the field name.' });
+        }
+        return res.status(400).json({ error: `Upload error: ${err.message}` });
+      }
+      
+      // Custom errors (like file filter rejection)
+      return res.status(400).json({ error: err.message });
     }
     
+    // Check if file was received
+    if (!req.file) {
+      console.error('❌ No file received');
+      return res.status(400).json({ error: 'No file uploaded. Make sure you selected a file.' });
+    }
+    
+    // Success!
     const filePath = `/uploads/${req.file.filename}`;
-    const fileType = req.file.mimetype.startsWith('video/') ? 'video' : 'image';
+    const fileType = req.file.mimetype.startsWith('video/') ? 'Video' : 'Image';
+    
+    console.log(`✅ ${fileType} uploaded: ${req.file.originalname} → ${req.file.filename}`);
+    console.log(`   Size: ${(req.file.size / 1024 / 1024).toFixed(2)} MB`);
     
     res.json({ 
       success: true, 
@@ -72,10 +121,7 @@ router.post('/', verifyAuth, upload.single('image'), (req, res) => {
       fileType: fileType,
       message: `${fileType} uploaded successfully` 
     });
-  } catch (error) {
-    console.error('Upload error:', error);
-    res.status(500).json({ error: 'Failed to upload file' });
-  }
+  });
 });
 
 module.exports = router;

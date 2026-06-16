@@ -7,14 +7,16 @@ const VALID_USERS = [
   { email: 'editor@trident.com', password: 'Edit2024!', role: 'editor' }
 ];
 
-// Login endpoint
+// ============================================================
+// POST /api/auth/login - Login
+// ============================================================
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
   
   const user = VALID_USERS.find(u => u.email === email && u.password === password);
   
   if (user) {
-    // In production, generate a real JWT token
+    // Generate a token
     const token = Buffer.from(`${email}:${Date.now()}`).toString('base64');
     res.json({
       success: true,
@@ -26,16 +28,30 @@ router.post('/login', (req, res) => {
   }
 });
 
-// Verify token endpoint
+// ============================================================
+// POST /api/auth/verify - Verify token (POST method)
+// ============================================================
 router.post('/verify', (req, res) => {
-  const { token } = req.body;
-  // Simple verification - in production, verify JWT properly
+  const token = req.body.token || req.headers.authorization?.split(' ')[1];
+  
   if (token) {
     res.json({ success: true });
   } else {
-    res.status(401).json({ success: false });
+    res.status(401).json({ success: false, error: 'Invalid token' });
+  }
+});
+
+// ============================================================
+// GET /api/auth/verify - Verify token (GET method - for frontend compatibility)
+// ============================================================
+router.get('/verify', (req, res) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  
+  if (token) {
+    res.json({ success: true });
+  } else {
+    res.status(401).json({ success: false, error: 'Invalid token' });
   }
 });
 
 module.exports = router;
-
