@@ -838,9 +838,9 @@
       "benefits": {
         "title": "How can our Cold Storage benefit you?",
         "description": "Your temperature-sensitive commodities must be stored and delivered in perfect condition. With Trident Cold Storage, you can be sure of a simplified cold chain that makes cargo quality and easy movement a reality.",
-        "description2": "How do we do this? Trident's cold storage solutions are powered by the latest technologies in refrigeration and remote management. They are also backed by decades of human expertise in commodities, logistics and end-to-end supply chain management. Our cold storage assets ensure that your cargo retains its quality, whether in cold storage or in transit across land, air, and ocean.",
+        "description2": "How do we do this? Trident's cold storage solutions are powered by the latest technologies in refrigeration and remote management. They are also backed by decades of human expertise in commodities, logistics and end-to-end supply chain management. Our cold storage assets ensure that your cargo retains its quality, whether in cold storage or in transit across land, air, and ocean shipments.",
         "description3": "With Trident, you can always enjoy a simplified cold chain journey with solutions customised to your every need.",
-        "image": "/cold_storage.avif"
+        "image": "/uploads/1781669724377-811485079.avif"
       },
       "coldChainSupport": {
         "title": "Supporting you across the cold chain",
@@ -947,7 +947,7 @@
         "benefits": [
           {
             "title": "Providing end-to-end integration",
-            "description": "Integrate your customs process with our Supply Chain Management (SCM) platform for export data management and downstream import benefits.",
+            "description": "Integrate your customs process with our Supply Chain Management (SCM) platform for export data management and downstream import benefits for all.",
             "icon": "api"
           },
           {
@@ -979,7 +979,7 @@
       },
       "contact": {
         "title": "Contact Our Customs Experts",
-        "subtitle": "Reach out to our customs clearance specialists for assistance with your import and export compliance needs.",
+        "subtitle": "Reach out to our customs clearance specialists for assistance with your import and export compliance need.",
         "buttonText": "Contact us"
       },
       "cta": {
@@ -1000,21 +1000,21 @@
       "overview": {
         "title": "Whatever your project, we have the logistics.",
         "description": "No two high-stakes projects are the same. To mitigate the unique risks and complexities facing yours, you need access to tailored-yet-tested capabilities. And you need expert support, visibility, and control from planning to final delivery.",
-        "description2": "In Trident, you have one trusted partner: a project logistics integrator offering decades of expertise, vast assets, and a global network to reach even the most remote locations. From out-of-gauge shipments to intricate logistics partnerships, we're committed to ensuring every component for your project arrives on time, in full, and with the utmost care.",
-        "image": "/project_cargo.avif",
+        "description2": "In Trident, you have one trusted partner: a project logistics integrator offering decades of expertise, vast assets, and a global network to reach even the most remote locations. From out-of-gauge shipments to intricate logistics partnerships, we're committed to ensuring every component for your project arrives on time, in full, and with the utmost care. Stary connected.",
+        "image": "/uploads/1781670573510-20621275.jpg",
         "imageCaption": "Trucks transporting yellow harvesters on a rural road near farmland."
       },
       "services": [
         {
           "title": "Project Ocean Transport",
           "description": "Deliver oversized and breakbulk cargo across oceans with tailored vessels. We manage procurement, QC, and transport to ensure safe, flexible delivery beyond container yards.",
-          "image": "/project_cargo_02.avif",
+          "image": "/uploads/1781671054938-947719564.jpg",
           "icon": "container"
         },
         {
           "title": "Specialised Airlift",
           "description": "Move project-bound or oversized cargo fast by air using short-range, heavy or ultra-heavy lift aircraft. We manage procurement and execution for smooth end-to-end delivery.",
-          "image": "/project_cargo_03.webp",
+          "image": "/uploads/1781670867768-359731985.jpg",
           "icon": "thunderbolt"
         },
         {
@@ -1072,7 +1072,7 @@
       },
       "cta": {
         "title": "Ready to start your project?",
-        "subtitle": "Contact our project logistics experts today",
+        "subtitle": "Contact our project logistics experts today without any delay",
         "buttonText": "Contact us"
       }
     },
@@ -1336,7 +1336,7 @@
         "title": "Industry overview",
         "subtitle": "In a world where 96% of all manufactured goods depend on chemicals in one way or another, there are ample opportunities for chemical companies to grow. Chemical manufacturers, striving to secure a larger share in the marketplace, have created an extremely competitive battleground.",
         "description": "Several industry trends – protectionist trade policies, tariff wars, and industry consolidation – are also pushing businesses to adopt new ways to stand out. As these trends permeate the chemical industry, many businesses are remodelling to drive growth and profitability. At the core of this transformation is the need to build resilience - with the ability to adapt, digitise, and modernise. Safety remains a high priority while decarbonisation has increasingly become a focus.",
-        "description2": "Chemical companies see their supply chains playing a crucial role in their business transformation. Whether they need to support continuous production lines with effective storage solutions; increase margins with supply chain cost-efficiencies; improve safety and compliance, or gain customer loyalty with greater visibility and on-time deliveries, they are making high demands of their supply chain partners to add value at every stage of their supply chain."
+        "description2": "Chemical companies see their supply chains playing a crucial role in their business transformation. Whether they need to support continuous production lines with effective storage solutions; increase margins with supply chain cost-efficiencies; improve safety and compliance, or gain customer loyalty with greater visibility and on-time deliveries, they are making high demands of their supply chain partners to add value at every stage of their supply chains."
       },
       "trends": {
         "title": "Six trends are shaping the chemical industry",
@@ -1346,7 +1346,7 @@
             "points": [
               "Meeting the need for flexible supplies",
               "Reducing lead times to support customer production",
-              "Customising supply chain solutions as per the need"
+              "Customising supply chain solutions as per the needs"
             ],
             "icon": "customer"
           },
@@ -1455,7 +1455,7 @@
       "hero": {
         "title": "Automotive Logistics",
         "subtitle": "Shift gears in automotive logistics for uninterrupted flow. Navigate disruptions confidently by enhancing adaptability and flexibility with integrated logistics solutions.",
-        "image": "/car_making_in_factory_white.jpg",
+        "image": "/uploads/1781697906946-377858425.mp4",
         "buttonText": "Get in touch"
       },
       "overview": {
@@ -1643,7 +1643,7 @@
         "title": "Shipping made simple and efficient",
         "description": "As markets constantly change, Trident Rate helps you stay prepared for any opportunity and execute with full clarity on costs and capacity.",
         "description2": "One platform is all it takes to manage your logistics from end to end. Ship with flexible booking options and the certainty of instant prices and guaranteed loading, so you can quickly deliver on customer needs with greater control every step of the way.",
-        "image": "/trident_rate_query.jpg",
+        "image": "/uploads/1781671515760-411568944.jpg",
         "imageCaption": "Smiling professional wearing glasses working on a laptop at a desk with a coffee mug nearby"
       },
       "whyTridentRate": {
@@ -1657,7 +1657,7 @@
           },
           {
             "title": "Speedy bookings",
-            "description": "Get instant availability, booking, and confirmation, and a full overview of departures, arrivals, and transit time.",
+            "description": "Get instant availability, booking, and confirmation, and a full overview of departures, arrivals, and transit times.",
             "icon": "thunderbolt"
           },
           {
@@ -1694,7 +1694,7 @@
       "hero": {
         "title": "Ocean Contract",
         "subtitle": "Get guaranteed space and market relevant rates for your ocean cargo, all year round.",
-        "image": "/ocean_contract_hero.jpg",
+        "image": "/uploads/1781672008819-136706327.mp4",
         "buttonText": "Contact us"
       },
       "overview": {
@@ -1732,14 +1732,14 @@
       },
       "contractProducts": {
         "title": "A wider range of contract products",
-        "subtitle": "With changing business needs, the demand for contracts that offer more specificity is essential. Ocean Contract has evolved to feature four distinct contract products that meet specific business requirements. Each of them offers certainty with regard to space availability on our vessels.",
+        "subtitle": "With changing business needs, the demand for contracts that offer more specificity is essential. Ocean Contract has evolved to feature four distinct contract products that meet specific business requirements. Each of them offers certainty with regard to space availability on our vessel.",
         "subtitle2": "They are differentiated by volume planning flexibility to meet supply chain operations and seasonal demands.",
         "products": {
           "fixed": {
             "title": "Ocean Contract Fixed",
             "description": "This offering provides a set number of containers per lane every week at market relevant rates.",
             "features": [
-              "You get access to a weekly committed volume for your stable ocean logistics needs.",
+              "You get access to a weekly committed volume for your stable ocean logistics need.",
               "Choose between Fixed pricing or monthly indexed pricing.",
               "Fixed contracts are for 3 months and above.",
               "Monthly access to reserve extra space via Space Reserve or Instant Space."
@@ -1750,10 +1750,10 @@
             "title": "Ocean Contract Seasonal",
             "description": "This product is ideal for supply chains that need to synchronise allocation with production fluctuations.",
             "features": [
-              "Weekly committed volume with 20% extra seasonality for up to 4 months per year.",
+              "Weekly committed volumes with 20% extra seasonality for up to 4 months per year.",
               "Choose fixed pricing or monthly indexed pricing.",
               "Fixed contracts are for 3 months and above.",
-              "Monthly access to reserve extra space via Space Reserve or Instant Space."
+              "Monthly access to reserve extra space via Space Reserve or Instant Spaces."
             ],
             "icon": "calendar"
           },
@@ -1780,7 +1780,7 @@
       "isActive": true,
       "hero": {
         "title": "Special Cargo",
-        "subtitle": "We provide tailored and efficient solutions for shipping your Out of Gauge, In Gauge and Break Bulk cargo.",
+        "subtitle": "We provide tailored and efficient solutions for shipping your Out of Gauge, In Gauge and Break Bulk cargos.",
         "image": "/special_cargo_shipment_hero.jpg",
         "buttonText": "Find a price"
       },
@@ -1805,7 +1805,7 @@
             "icon": "tool"
           },
           {
-            "title": "International expertise",
+            "title": "International expertises",
             "description": "Our international team of project cargo experts are here to help you every step of the way",
             "icon": "team"
           },
@@ -1912,8 +1912,8 @@
       "isActive": true,
       "hero": {
         "title": "Global Supply Chain Management",
-        "subtitle": "Get unprecedented control over end-to-end supply chain.",
-        "image": "/supply_chain_hero.jpg",
+        "subtitle": "Get unprecedented control over end-to-end supply chain management.",
+        "image": "/uploads/1781676546277-602039767.mp4",
         "buttonText": "Contact us"
       },
       "section1": {
@@ -2076,7 +2076,7 @@
         "title": "Designed to protect your garments all the way",
         "description": "For fashion brands and stores, keeping clothes and any warehouse garment in top-notch condition during shipping is crucial. Meet Premium Garments on Hangers Containers: your go-to solution for smooth international transportation that ensures your clothes arrive without wrinkles and looking their best. These special containers come pre-fitted with hangers, making them perfect for safely transporting delicate garments.",
         "description2": "Trident's Premium Garments on Hangers containers offer flexibility and can handle greater volume. It's the ideal solution for retailers who want a safe, affordable and hassle-free way to ship garments.",
-        "imageCaption": "A worker uses a handheld scanner to scan the barcode on each garment to ship.",
+        "imageCaption": "A worker uses a handheld scanner to scan the barcode on each garment to ship by container.",
         "image": "/garments_on_hanger_02.jpg"
       },
       "whyChooseUs": {
@@ -2196,7 +2196,7 @@
       "isActive": true,
       "hero": {
         "title": "Shift into higher gear to overcome automotive disruptions",
-        "subtitle": "Integrated logistics brings greater flexibility and agility to your supply chain.",
+        "subtitle": "Integrated logistics brings greater flexibility and agility to your supply chain management.",
         "image": "/car_in_container_hero_2.png",
         "buttonText": "Contact us"
       },
@@ -2290,7 +2290,7 @@
         "title": "What is Flexibag Logistics?",
         "description": "If you are in the need of transporting your liquid cargo in bulk efficiently and safely, the risks of spillage and contamination due to container quality and sub-optimal safety procedures can be challenging. Flexibag Logistics is a specialised solution for transporting bulk liquid cargo efficiently and safely.",
         "description2": "It is achieved with a packaging method that involves flexibags placed inside high-quality containers. It is an ideal choice to move bulk wine, edible oils, or industrial chemicals. Our Flexibag system is designed to ensure that your valuable liquids remain in top condition from origin to destination.",
-        "description3": "Our experts can help you streamline your bulk liquid logistics, right from booking, container selection and preparation, to final delivery.",
+        "description3": "Our experts can help you streamline your bulk liquid logistics, right from booking, container selection and preparation, to final deliveries.",
         "image": "/lubrican_02.jpg",
         "imageCaption": "A busy cargo port with multiple Trident shipping containers."
       },
@@ -2338,7 +2338,7 @@
         "subtitle": "Streamline your bulk liquid logistics, right from container selection and preparation to booking and final delivery.",
         "steps": [
           "Flexibag procurement",
-          "Shipment order placed",
+          "Shipment order placed correctly",
           "Pick up empty container inspection and audit of proper container selection",
           "Flexibag installation including fitting, bulkhead, valve key or heating pads if required",
           "Arrival at the loading site",
@@ -2439,5 +2439,5 @@
     "contactEmail": "info@trident.com",
     "contactPhone": "+880 1234 567890"
   },
-  "lastUpdated": "2026-06-17T03:32:45.370Z"
+  "lastUpdated": "2026-06-17T12:05:07.397Z"
 }
