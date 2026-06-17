@@ -502,8 +502,8 @@
       },
       "crossBorder": {
         "title": "Cross-Border FTL and LTL",
-        "description": "With our long history of international trade and customs expertise, you can rely on our efficient cross-border FTL and LTL services to transport your goods seamlessly between countries. We can help you set up recurring trade flows or explore entering new geographies with smaller shipments, from pick up through to delivery.",
-        "image": "/cross_border_truck.jpg",
+        "description": "With our long history of international trade and customs expertise, you can rely on our efficient cross-border FTL and LTL services to transport your goods seamlessly between countries. We can help you set up recurring trade flows or explore entering new geographies with smaller shipments, from pick up through to delivery at end point.",
+        "image": "/uploads/1781612945992-29303780.jpg",
         "showBothButtons": true
       },
       "whyChooseUs": {
@@ -511,7 +511,7 @@
         "benefits": [
           {
             "title": "Optimised pricing",
-            "description": "Streamline your trucking spend through our smart routing, precise planning, and efficient asset utilisation – ensuring every kilometre delivers maximum value."
+            "description": "Streamline your trucking spend through our smart routing, precise planning, and efficient asset utilisation – ensuring every kilometre delivers maximum values."
           },
           {
             "title": "Speed and network efficiency",
@@ -556,7 +556,7 @@
           },
           {
             "step": 4,
-            "title": "Get local assistance",
+            "title": "Get local assistances",
             "description": "Our regional sales team will respond shortly."
           }
         ],
@@ -620,7 +620,7 @@
         "title": "Build a supply chain that matches the pace of your business",
         "description": "Ever-changing customer needs require businesses to be resilient and having access to strategically located warehouses goes a long way in establishing a strong global and regional presence. With facilities that receive, store, process and dispatch cargo quickly, you can build flexibility and resilience throughout your supply chain.",
         "description2": "Trident's warehousing and distribution services provide lean, fast and efficient methods for the consolidation, deconsolidation and fulfilment of your goods. With specialised solutions like bonded storage facilities, omni-channel fulfilment centres and regional hubs, we have the capabilities to meet the needs of your global supply chain.",
-        "description3": "With over 30 years of experience in building highly agile warehousing and distribution services, Trident Contract Logistics can be your global logistics partner.",
+        "description3": "With over 35 years of experience in building highly agile warehousing and distribution services, Trident Contract Logistics can be your global logistics partner.",
         "image": "/warehouse_staff.jpg"
       },
       "whyTrident": {
@@ -649,9 +649,9 @@
         "title": "Here's what Trident Contract Logistics services offer:",
         "services": [
           {
-            "title": "Warehousing services",
+            "title": "Warehousing services we are offering",
             "description": "Keep your goods moving with flexible, tech-driven warehousing designed for speed, visibility, and reliability.",
-            "image": "/warehouse_service-01.jpg"
+            "image": "/uploads/1781618723480-601323534.jpg"
           },
           {
             "title": "Distribution Services",
@@ -694,7 +694,7 @@
           "title": "Add a little speed and flexibility to your supply chain",
           "description": "Container depots are essential nodes that act as key connectors expediting the import and export of your cargo. Think of them as quick stops fulfilling critical container and cargo needs in a well-oiled supply chain. Our experts are on hand with industry-leading import/export management processes and a range of value-added services to ensure your supply chain is running seamlessly. You can now reach more customers in remote or inland locations with our inland container depots supporting your logistics needs.",
           "description2": "Our depots give you the flexibility to absorb disruptions and uncertainties with solutions designed to address your specific requirements, including building dedicated container depots closer to your factories or transport nodes.",
-          "image": "/depot_operation_01.avif"
+          "image": "/uploads/1781666538662-231654257.avif"
         },
         "keyBenefits": {
           "title": "Key benefits",
@@ -743,7 +743,7 @@
             "Seamlessly connect to remote customers through our inland container depot network."
           ],
           "description": "Get end-to-end import/export cargo services at our depots, whether it is preparing containers, cargo stuffing and destuffing, receiving and stowing full containers, facilitating customs clearances in the bonded yard, or shunting full containers to port closer to vessel arrival. You gain the reliable handling of your container cargo from one integrated logistics solutions partner at origin and destination.",
-          "image": "/deport-supply-chain.svg"
+          "image": "/uploads/1781667165307-95915836.jpg"
         },
         "customerDedicatedDepot": {
           "title": "Customer dedicated depot",
@@ -818,7 +818,12 @@
       },
       "contact": {
         "title": "Contact our Depot Services Team",
-        "subtitle": "Reach out to our depot experts for any assistance with your container and cargo needs.",
+        "subtitle": "Reach out to our depot experts for any assistance with your container and cargo need.",
+        "buttonText": "Contact us"
+      },
+      "cta": {
+        "title": "Ready to optimize your depot operations?",
+        "subtitle": "Contact our depot experts today",
         "buttonText": "Contact us"
       }
     },
@@ -2434,5 +2439,5 @@
     "contactEmail": "info@trident.com",
     "contactPhone": "+880 1234 567890"
   },
-  "lastUpdated": "2026-06-16T11:55:26.668Z"
+  "lastUpdated": "2026-06-17T03:32:45.370Z"
 }
