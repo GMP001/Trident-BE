@@ -1,3 +1,5 @@
+//D:/Trident Log/Trident-BE/server.js
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -10,6 +12,8 @@ dotenv.config();
 const contentRoutes = require('./routes/contentRoutes');
 const authRoutes = require('./routes/authRoutes');
 const uploadRoutes = require('./routes/upload');
+const quoteRoutes = require('./routes/quoteRoutes');
+const contactRoutes = require('./routes/contactRoutes');
 
 // Initialize Express
 const app = express();
@@ -34,7 +38,9 @@ app.use(express.urlencoded({ extended: true, limit: '300mb' }));
 // 4. Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/content', contentRoutes);
-app.use('/api/upload', uploadRoutes);  // Upload route AFTER json middleware
+app.use('/api/upload', uploadRoutes);
+app.use('/api/quote', quoteRoutes);
+app.use('/api/contact', contactRoutes);
 
 // 5. Health check endpoint
 app.get('/api/health', (req, res) => {

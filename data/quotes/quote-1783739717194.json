@@ -1,0 +1,24 @@
+{
+  "name": "Sarjil Pasha",
+  "email": "4mtrading@gmail.com",
+  "phone": "+880174608982",
+  "origin": "Chittagong, Bangladesh",
+  "destination": "Hamburg, Germany",
+  "modeOfTransport": [
+    "Sea"
+  ],
+  "cargoType": [
+    "General"
+  ],
+  "shipmentTerms": [
+    "CIF"
+  ],
+  "grossWeight": "19500",
+  "volume": "45.00",
+  "targetRate": "3500.00",
+  "targetDestinationTerms": "",
+  "companyName": "ABC Company",
+  "additionalNotes": "I need that target rate. Is that possible?",
+  "submittedAt": "2026-07-11T03:15:17.193Z",
+  "ip": "::1"
+}

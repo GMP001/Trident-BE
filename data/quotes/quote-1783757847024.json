@@ -1,0 +1,18 @@
+{
+  "name": "Asif Ahmed",
+  "email": "asif.ahmed@gmail.com",
+  "phone": "+01852300014",
+  "origin": "Chittagong, Bangladesh",
+  "destination": "Bremen, Germany",
+  "modeOfTransport": "Sea",
+  "cargoType": "General",
+  "shipmentTerms": "CIF",
+  "grossWeight": "18500",
+  "volume": "28",
+  "targetRate": "",
+  "targetDestinationTerms": "",
+  "companyName": "ABC Ltd",
+  "additionalNotes": "Need urgent Rate",
+  "submittedAt": "2026-07-11T08:17:27.023Z",
+  "ip": "::1"
+}

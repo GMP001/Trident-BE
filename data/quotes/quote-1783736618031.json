@@ -1,0 +1,21 @@
+{
+  "origin": "Chittagong, Bangladesh",
+  "destination": "Barcelona, Espain",
+  "modeOfTransport": [
+    "Sea"
+  ],
+  "cargoType": [
+    "General"
+  ],
+  "shipmentTerms": [
+    "CIF"
+  ],
+  "grossWeight": "12500",
+  "volume": "28.00",
+  "targetRate": "1650.00",
+  "targetDestinationTerms": "",
+  "companyName": "ABC Ltd",
+  "additionalNotes": "I need equipment for stuffing at CFS by the 12th of July, 2026",
+  "submittedAt": "2026-07-11T02:23:38.030Z",
+  "ip": "::1"
+}

@@ -1,3 +1,5 @@
+//D:/Trident Log/Trident-BE/routes/contentRoutes.js
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -172,6 +174,62 @@ router.put('/settings', verifyAuth, (req, res) => {
     res.json({ success: true, message: 'Settings updated successfully' });
   } catch (error) {
     res.status(500).json({ error: 'Failed to update settings' });
+  }
+});
+
+// ============================================================
+// PUT /api/content/settings/quote-recipients - Update quote recipient emails
+// ============================================================
+router.put('/settings/quote-recipients', verifyAuth, (req, res) => {
+  try {
+    const content = JSON.parse(fs.readFileSync(contentFilePath, 'utf8'));
+    const { emails } = req.body;
+    
+    if (!content.globalSettings) {
+      content.globalSettings = {};
+    }
+    
+    content.globalSettings.quoteRecipients = emails;
+    content.lastUpdated = new Date().toISOString();
+    
+    fs.writeFileSync(contentFilePath, JSON.stringify(content, null, 2));
+    
+    res.json({ 
+      success: true, 
+      message: 'Quote recipients updated successfully',
+      recipients: emails 
+    });
+  } catch (error) {
+    console.error('Error updating quote recipients:', error);
+    res.status(500).json({ error: 'Failed to update quote recipients' });
+  }
+});
+
+// ============================================================
+// PUT /api/content/settings/contact-recipients - Update contact recipients
+// ============================================================
+router.put('/settings/contact-recipients', verifyAuth, (req, res) => {
+  try {
+    const content = JSON.parse(fs.readFileSync(contentFilePath, 'utf8'));
+    const { emails } = req.body;
+    
+    if (!content.globalSettings) {
+      content.globalSettings = {};
+    }
+    
+    content.globalSettings.contactRecipients = emails;
+    content.lastUpdated = new Date().toISOString();
+    
+    fs.writeFileSync(contentFilePath, JSON.stringify(content, null, 2));
+    
+    res.json({ 
+      success: true, 
+      message: 'Contact recipients updated successfully',
+      recipients: emails 
+    });
+  } catch (error) {
+    console.error('Error updating contact recipients:', error);
+    res.status(500).json({ error: 'Failed to update contact recipients' });
   }
 });
 
