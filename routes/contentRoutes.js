@@ -314,15 +314,17 @@ router.put('/page/:pageKey', authenticateToken, authorizeRoles('super_admin', 'a
 // ============================================================
 router.put('/global-settings', authenticateToken, authorizeRoles('super_admin', 'admin'), async (req, res) => {
     try {
-        const { company_name, contact_email, contact_phone, quote_recipients, contact_recipients } = req.body;
+        // 1. Add footerData to destructured body
+        const { company_name, contact_email, contact_phone, quote_recipients, contact_recipients, socialLinks, footerData } = req.body;
 
+        // 2. Update SQL to include footer_data
         const result = await db.query(
             `UPDATE global_settings 
              SET company_name = $1, contact_email = $2, contact_phone = $3, 
-                 quote_recipients = $4, contact_recipients = $5, updated_at = CURRENT_TIMESTAMP
+                 quote_recipients = $4, contact_recipients = $5, social_links = $6, footer_data = $7, updated_at = CURRENT_TIMESTAMP
              WHERE id = (SELECT id FROM global_settings LIMIT 1)
              RETURNING *`,
-            [company_name, contact_email, contact_phone, quote_recipients, contact_recipients]
+            [company_name, contact_email, contact_phone, quote_recipients, contact_recipients, socialLinks, footerData]
         );
 
         console.log(`✅ Global settings updated by ${req.user.uid}`);
