@@ -7,12 +7,13 @@ const db = require('../models/db');
 const { authenticateToken, authorizeRoles } = require('../middleware/auth');
 
 const router = express.Router();
+const { validateLogin, validateCreateAdmin } = require('../validators/authValidator');
 
 // ============================================================
 // POST /api/auth/login
 // Public - Authenticate user and return tokens
 // ============================================================
-router.post('/login', async (req, res) => {
+router.post('/login', validateLogin, async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -185,7 +186,7 @@ router.post('/logout', authenticateToken, async (req, res) => {
 // POST /api/auth/create-admin
 // Protected - Only super_admin can create new admin users
 // ============================================================
-router.post('/create-admin', authenticateToken, authorizeRoles('super_admin'), async (req, res) => {
+router.post('/create-admin', authenticateToken, authorizeRoles('super_admin'), validateCreateAdmin, async (req, res) => {
     try {
         const { email, full_name, password, role } = req.body;
 

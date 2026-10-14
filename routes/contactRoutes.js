@@ -6,6 +6,8 @@ const db = require('../models/db');
 require('dotenv').config();
 
 const router = express.Router();
+const { authenticateToken, authorizeRoles } = require('../middleware/auth');
+const { validateBooking } = require('../validators/contactValidator');
 
 // Configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -22,7 +24,7 @@ const transporter = nodemailer.createTransport({
 // POST /api/contact
 // Public - Book a consultation
 // ============================================================
-router.post('/', async (req, res) => {
+router.post('/', validateBooking, async (req, res) => {
     try {
         const {
             name,
@@ -158,7 +160,7 @@ router.get('/booked-slots', async (req, res) => {
 // GET /api/contact/bookings
 // Protected (admin) - Get all bookings
 // ============================================================
-router.get('/bookings', async (req, res) => {
+router.get('/bookings', authenticateToken, authorizeRoles('super_admin', 'admin'), async (req, res) => {
     try {
         const result = await db.query(
             'SELECT * FROM bookings ORDER BY submitted_at DESC'

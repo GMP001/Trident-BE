@@ -6,6 +6,8 @@ const db = require('../models/db');
 require('dotenv').config();
 
 const router = express.Router();
+const { validateQuote } = require('../validators/quoteValidator');
+const { authenticateToken, authorizeRoles } = require('../middleware/auth');
 
 // Configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -22,7 +24,7 @@ const transporter = nodemailer.createTransport({
 // POST /api/quote
 // Public - Submit a quote request
 // ============================================================
-router.post('/', async (req, res) => {
+router.post('/', validateQuote, async (req, res) => {
     try {
         const {
             name,
@@ -59,22 +61,18 @@ router.post('/', async (req, res) => {
         // Save quote to database
         await db.query(
             `INSERT INTO quotes 
-             (origin, destination, mode_of_transport, cargo_type, shipment_terms, 
-              gross_weight, volume, target_rate, target_destination_terms, 
-              company_name, additional_notes, ip, submitted_at)
-             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, NOW())`,
+            (name, email, phone, origin, destination, mode_of_transport, cargo_type, 
+            shipment_terms, gross_weight, volume, target_rate, target_destination_terms, 
+            company_name, additional_notes, ip, submitted_at)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, NOW())`,
             [
-                origin,
-                destination,
+                name, email, phone,
+                origin, destination,
                 modeOfTransport || [],
                 cargoType || [],
                 shipmentTerms || [],
-                grossWeight,
-                volume,
-                targetRate,
-                targetDestinationTerms,
-                companyName,
-                additionalNotes,
+                grossWeight, volume, targetRate, targetDestinationTerms,
+                companyName, additionalNotes,
                 req.ip
             ]
         );
@@ -193,7 +191,7 @@ router.post('/', async (req, res) => {
 // GET /api/quote
 // Protected (admin) - Get all quotes
 // ============================================================
-router.get('/', async (req, res) => {
+router.get('/', authenticateToken, authorizeRoles('super_admin', 'admin'), async (req, res) => {
     try {
         const result = await db.query(
             'SELECT * FROM quotes ORDER BY submitted_at DESC'
