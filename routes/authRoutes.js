@@ -187,6 +187,7 @@ router.post('/logout', authenticateToken, async (req, res) => {
 // Protected - Only super_admin can create new admin users
 // ============================================================
 router.post('/create-admin', authenticateToken, authorizeRoles('super_admin'), validateCreateAdmin, async (req, res) => {
+    
     try {
         const { email, full_name, password, role } = req.body;
 
